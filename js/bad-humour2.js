@@ -423,6 +423,7 @@ function createSummary (lastScore) {
     document.getElementById('field').appendChild(parentDiv);
     fillHS();
 	var currentScore = createHSTitle(lastScore);
+	currentScore.style.fontSize = "36px";
 	parentDiv.appendChild(currentScore);
     if(!(lastScore > document.getElementById('highscore4').childNodes[0].nodeValue)) {
         var hsInstruction = createHSTitle('Try again!');
