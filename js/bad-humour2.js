@@ -323,7 +323,7 @@ function createForest() {
     newForest.style.position = "absolute";
     newForest.style.top = "0px";
     newForest.style.zIndex = "0";
-    newForest.style.left = (1970 * forestNum) + "px";
+    newForest.style.left = 0 + (1970 * forestNum) + "px";
     document.getElementById('field').appendChild(newForest);
 }
 
