@@ -99,7 +99,7 @@ function moveLandscape(itemClassName) {
     for (let i = 0; i < items.length; i++) {
         var item = items[i];
         item.style.left = parseInt(item.style.left) - 1 + "px";
-        if (parseInt(item.style.left) + parseInt(item.style.width) < 10) {
+        if (parseInt(item.style.left) + 1985.06 < 10) {
             item.style.left = "1970px";
         }
     }
