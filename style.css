@@ -1,0 +1,13 @@
+body {
+    width: 100%;
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+}
+#field {
+    width: 100%;
+    background-color: white;
+    margin: 200px 0 0 0;
+    padding: 0;
+    height: 400px;
+}
