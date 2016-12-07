@@ -415,13 +415,15 @@ function createSummary (lastScore) {
     parentDiv.style.backgroundColor = "rgba(128,0,0,0.8)";
 
     /* Fill Summary Box */
-    var hsTitle = createHSTitle('Highscores');
+    var hsTitle = createHSTitle('High Scores');
     var hsList = createHSList();
 
     parentDiv.appendChild(hsTitle);
     parentDiv.appendChild(hsList);
     document.getElementById('field').appendChild(parentDiv);
     fillHS();
+	var currentScore = createHSTitle(lastScore);
+	parentDiv.appendChild(currentScore);
     if(!(lastScore > document.getElementById('highscore4').childNodes[0].nodeValue)) {
         var hsInstruction = createHSTitle('Try again!');
         hsInstruction.style.marginTop = "40px";
