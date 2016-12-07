@@ -58,12 +58,12 @@ function gameReset () {
         createTower(randomNum);
         towerNum++;
     }
-    createScoreBoard();
-    createScore();
 }
 
 function startGame() {
 	score = 0;
+	createScoreBoard();
+    createScore();
     gameStarted = true;
     scoreSubmitted = false;
     enactGravity();
