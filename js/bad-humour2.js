@@ -60,10 +60,10 @@ function gameReset () {
     }
     createScoreBoard();
     createScore();
-
 }
 
 function startGame() {
+	score = 0;
     gameStarted = true;
     scoreSubmitted = false;
     enactGravity();
@@ -218,7 +218,6 @@ function clearAll() {
     towerNum = 0;
     topTowerNum = 0;
     forestNum = 0;
-	score = 0;
     if (fallSpeed != 0) {
         fallSpeed = 0;
     }
