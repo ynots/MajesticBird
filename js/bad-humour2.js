@@ -432,6 +432,7 @@ function createSummary (lastScore) {
     } else {
         var hsInstruction = createHSTitle('Congrats! You have beaten a highscore!');
         hsInstruction.style.fontSize = "16px";
+	hsInstruction.style.marginLeft = "50px";
         var inputBox = createScoreInput();
         var label = createLabel();
         var button = createUsernameSubmit(lastScore);
