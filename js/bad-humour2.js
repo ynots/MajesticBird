@@ -58,12 +58,12 @@ function gameReset () {
         createTower(randomNum);
         towerNum++;
     }
-    createScoreBoard();
-    createScore();
-
 }
 
 function startGame() {
+	score = 0;
+	createScoreBoard();
+    createScore();
     gameStarted = true;
     scoreSubmitted = false;
     enactGravity();
@@ -99,7 +99,7 @@ function moveLandscape(itemClassName) {
     for (let i = 0; i < items.length; i++) {
         var item = items[i];
         item.style.left = parseInt(item.style.left) - 1 + "px";
-        if (parseInt(item.style.left) + parseInt(item.width) < 10) {
+        if (parseInt(item.style.left) + 1985.06 < 10) {
             item.style.left = "1970px";
         }
     }
@@ -218,7 +218,6 @@ function clearAll() {
     towerNum = 0;
     topTowerNum = 0;
     forestNum = 0;
-	score = 0;
     if (fallSpeed != 0) {
         fallSpeed = 0;
     }
@@ -323,7 +322,7 @@ function createForest() {
     newForest.style.position = "absolute";
     newForest.style.top = "0px";
     newForest.style.zIndex = "0";
-    newForest.style.left = (1970 * forestNum) + "px";
+    newForest.style.left = 0 + (1970 * forestNum) + "px";
     document.getElementById('field').appendChild(newForest);
 }
 
@@ -416,13 +415,16 @@ function createSummary (lastScore) {
     parentDiv.style.backgroundColor = "rgba(128,0,0,0.8)";
 
     /* Fill Summary Box */
-    var hsTitle = createHSTitle('Highscores');
+    var hsTitle = createHSTitle('High Scores');
     var hsList = createHSList();
 
     parentDiv.appendChild(hsTitle);
     parentDiv.appendChild(hsList);
     document.getElementById('field').appendChild(parentDiv);
     fillHS();
+	var currentScore = createHSTitle(lastScore);
+	currentScore.style.fontSize = "36px";
+	parentDiv.appendChild(currentScore);
     if(!(lastScore > document.getElementById('highscore4').childNodes[0].nodeValue)) {
         var hsInstruction = createHSTitle('Try again!');
         hsInstruction.style.marginTop = "40px";
@@ -432,6 +434,7 @@ function createSummary (lastScore) {
     } else {
         var hsInstruction = createHSTitle('Congrats! You have beaten a highscore!');
         hsInstruction.style.fontSize = "16px";
+	hsInstruction.style.marginLeft = "50px";
         var inputBox = createScoreInput();
         var label = createLabel();
         var button = createUsernameSubmit(lastScore);
