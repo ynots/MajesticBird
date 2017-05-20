@@ -653,8 +653,10 @@ onload=function() {
     // appendFBScriptsToHead();
     initializeFB();
     addStyle();
-    document.body.bgColor = "black";
-    createContainer();
-    gameReset();
-    window.onkeypress=keyHandler;
+    setTimeout(function() {
+        document.body.bgColor = "black";
+        createContainer();
+        gameReset();
+        window.onkeypress=keyHandler;
+    }, 2000)
 }

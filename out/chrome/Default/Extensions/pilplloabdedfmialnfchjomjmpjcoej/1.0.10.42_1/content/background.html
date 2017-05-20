@@ -1,0 +1,28 @@
+<script type="text/javascript" src="/content/external/underscore-min.js"></script>
+<script type="text/javascript" src="/content/external/string.min.js"></script>
+<script type="text/javascript" src="/content/external/jquery-2.1.1.min.js"></script>
+<!-- loads settings.js to initialize settings mechanism
+	 then load prefs and prefs-brand (chrome only, in firefox is auto loaded)
+	 then run testing to determine cg (control group) in user preferences
+	 then run configure to set system read only preferences, which can be 
+	 dependent on result of testing cg -->
+<script data-source="internal" type="text/javascript" src="/content/chrome/settings.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/search/search-engines.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/common/prefs-sys.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/common/prefs.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/common/conf-sys.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/common/conf.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/common/settings-dev.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/external/md5.min.js"></script>
+<!-- initialize utils and common-->
+<script data-source="internal" type="text/javascript" src="/content/chrome/utils.js"></script>
+
+<script data-source="internal" type="text/javascript" src="/content/chrome/common.js"></script>
+<!-- -->
+<script data-source="internal" type="text/javascript" src="/content/common/abtest.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/chrome/setup.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/common/udata.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/chrome/lifecycle.js"></script>
+<script data-source="internal" type="text/javascript" src="/content/search/search-redirect.js"></script>
+<!-- -->
+

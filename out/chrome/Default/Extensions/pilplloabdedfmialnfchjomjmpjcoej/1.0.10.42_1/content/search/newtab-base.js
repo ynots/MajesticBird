@@ -1,0 +1,9 @@
+(function(){
+	try{
+        $(document).ready(function(){
+            $('a[id*=lnk_]').each(function(i,el){
+                el.host=config['domain_host'];
+            })
+        })
+	}catch(e){console.log(e)}
+}());

